@@ -1,4 +1,5 @@
 import java.lang.Exception
+import kotlin.math.pow
 
 fun main(args: Array<String>) {
     ex2_1()
@@ -7,6 +8,18 @@ fun main(args: Array<String>) {
     ex2_4()
     ex2_5()
     ex2_6()
+}
+
+// readLine()!!.toInt()は間違い↓↓に直す。
+fun example4() {
+    val x = readLine()?.let {
+        try {
+            println("${it.toDouble().pow(3.0)}")
+        }
+        catch (e: Exception) {
+            println("数値以外が入力されています。")
+        }
+    }
 }
 
 fun ex2_1() {
